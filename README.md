@@ -1,6 +1,6 @@
 # HateShield: A Chrome Extension for Blocking Hate Speech
 
-![HateShield Logo](path/to/logo.png)
+![HateShield Logo](utils/64446697-c001-4096-ad60-fde407b3fbd2.jpeg)
 
 HateShield is a Chrome extension that utilizes advanced Natural Language Processing (NLP) techniques to shield users from hate speech on social media platforms. By classifying comments as hate speech or normal, it creates a safer online environment by filtering out racist, sexist, homophobic comments, and general profanity according to user preferences.
 
