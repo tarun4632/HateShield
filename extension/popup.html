@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hate Shield</title>
+
+    <style>
+      body {
+        background-color: #2b2b2b;
+        width: 200px;
+        height: 300px;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        color: white;
+      }
+      #image {
+        width: 180px;
+        height: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      #commentsList {
+        list-style-type: none;
+        padding: 0;
+      }
+      .commentItem {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .checkbox-wrapper-31:hover .check {
+        stroke-dashoffset: 0;
+      }
+
+      .checkbox-wrapper-31 {
+
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+      }
+      .checkbox-wrapper-31 .background {
+        fill: #ccc;
+        transition: ease all 0.6s;
+        -webkit-transition: ease all 0.6s;
+      }
+      .checkbox-wrapper-31 .stroke {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+        transition: ease all 0.6s;
+        -webkit-transition: ease all 0.6s;
+      }
+      .checkbox-wrapper-31 .check {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        stroke-dashoffset: 22;
+        stroke-dasharray: 22;
+        transition: ease all 0.6s;
+        -webkit-transition: ease all 0.6s;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        margin: 0;
+        opacity: 0;
+        -appearance: none;
+        -webkit-appearance: none;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"]:hover {
+        cursor: pointer;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"]:checked + svg .background {
+        fill: #6cbe45;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"]:checked + svg .stroke {
+        stroke-dashoffset: 0;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"]:checked + svg .check {
+        stroke-dashoffset: 0;
+      }
+      .button-17 {
+        margin-top: 20px;
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  height: 24px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.button-17:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+    </style>
+  </head>
+  <body>
+
+    <img id="image" src="icon.png" />
+    <div>Choose Platform:</div>
+    <div class="container">
+      <div class="checkbox-wrapper-31">
+        <input type="checkbox" />
+        <svg viewBox="0 0 35.6 35.6">
+          <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+          <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+          <polyline
+            class="check"
+            points="11.78 18.12 15.55 22.23 25.17 12.87"
+          ></polyline>
+        </svg>
+        
+      </div>
+      <label for="checkbox"> YouTube</label>
+    </div>
+    <div class="container">
+      <div class="checkbox-wrapper-31">
+        <input type="checkbox" />
+        <svg viewBox="0 0 35.6 35.6">
+          <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+          <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+          <polyline
+            class="check"
+            points="11.78 18.12 15.55 22.23 25.17 12.87"
+          ></polyline>
+        </svg>
+        
+      </div>
+      <label for="checkbox"> Instagram</label>
+    </div>
+    <div class="container">
+      <div class="checkbox-wrapper-31">
+        <input type="checkbox" />
+        <svg viewBox="0 0 35.6 35.6">
+          <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+          <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+          <polyline
+            class="check"
+            points="11.78 18.12 15.55 22.23 25.17 12.87"
+          ></polyline>
+        </svg>
+        
+      </div>
+      <label for="checkbox"> Twitter</label>
+    </div>
+    <button class="button-17" role="button">Next</button>
+    <script src="popup.js"></script>
+  </body>
+</html>

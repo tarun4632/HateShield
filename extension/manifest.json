@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Hate Shield",
+    "version": "1.0",
+    "host_permissions": [
+        "https://extension.ninja/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "icons": {
+      "48": "icon.png"
+    }
+  }
+  
