@@ -41,7 +41,66 @@
         align-items: center;
         margin-top: 10px;
       }
-      
+      .checkbox-wrapper-31:hover .check {
+        stroke-dashoffset: 0;
+      }
+
+      .checkbox-wrapper-31 {
+
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+      }
+      .checkbox-wrapper-31 .background {
+        fill: #ccc;
+        transition: ease all 0.6s;
+        -webkit-transition: ease all 0.6s;
+      }
+      .checkbox-wrapper-31 .stroke {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+        transition: ease all 0.6s;
+        -webkit-transition: ease all 0.6s;
+      }
+      .checkbox-wrapper-31 .check {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        stroke-dashoffset: 22;
+        stroke-dasharray: 22;
+        transition: ease all 0.6s;
+        -webkit-transition: ease all 0.6s;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        margin: 0;
+        opacity: 0;
+        -appearance: none;
+        -webkit-appearance: none;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"]:hover {
+        cursor: pointer;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"]:checked + svg .background {
+        fill: #6cbe45;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"]:checked + svg .stroke {
+        stroke-dashoffset: 0;
+      }
+      .checkbox-wrapper-31 input[type="checkbox"]:checked + svg .check {
+        stroke-dashoffset: 0;
+      }
       .button-17 {
         margin-top: 20px;
   align-items: center;
@@ -79,7 +138,7 @@
 
 .button-17:hover {
   background: #F6F9FE;
-  color: #6cbe45;
+  color: blue;
 }
 
 .button-17:active {
@@ -89,7 +148,7 @@
 
 .button-17:focus {
   outline: none;
-  border: 2px solid #6cbe45;
+  border: 2px solid blue;
 }
 
 .button-17:not(:disabled) {
@@ -111,74 +170,35 @@
 .button-17:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
-.RadialProgress {
-  --hue: 120; /* Change the hue to green (120 for green) */
-  --holesize: 65%;
-  --track-bg: hsl(233, 34%, 92%);
-  
-  block-size: 50vmin;
-  inline-size: 50vmin;
-  min-inline-size: 100px;
-  min-block-size: 100px;
-  display: grid;
-  place-items: center;
-  position: relative;
-  font-weight: 700;
-  font-size: max(10vmin, 1.4rem);
-}
-
-.RadialProgress::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50%;
-  z-index: -1;
-  background: conic-gradient(
-    hsl(var(--hue), 100%, 70%), /* Use the --hue variable */
-    hsl(var(--hue), 100%, 40%),
-    hsl(var(--hue), 100%, 70%) var(--progress, 0%),
-    var(--track-bg) var(--progress, 0%) 100%
-  );
-  mask-image: radial-gradient(
-    transparent var(--holesize),
-    black calc(var(--holesize) + 0.5px)
-  );
-}
-#range{
-    color: #6cbe45;
-}
-
-
-#progress-bar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
     </style>
   </head>
   <body>
 
     <img id="image" src="icon.png" />
-<div id="progress-bar">
-    <div
-  class="RadialProgress"
-  role="progressbar"
-  aria-valuenow="25"
-  aria-valuemin="0"
-  aria-valuemax="100"
-></div>
-
-<input id="range" type="range" step="25" value="25" min="0" max="100" />
-
-</div>
-
-    <button class="button-17" role="button">Submit</button>
-    <script src="popup2.js"></script>
+    <div>Filter Sensitivity:</div>
+    <div class="container">
+      <div class="checkbox-wrapper-31">
+        <input name="radio" type="radio" />
+       
+        
+      </div>
+      <label for="radio"> YouTube</label>
+    </div>
+    <div class="container">
+      <div class="checkbox-wrapper-31">
+        <input name="radio" type="radio" />
+        
+      </div>
+      <label for="radio"> Moderate</label>
+    </div>
+    <div class="container">
+      <div class="checkbox-wrapper-31">
+        <input name="radio" type="radio" />
+      </div>
+      <label for="radio"> Extreme</label>
+    </div>
+    <button id="nextButton" class="button-17" role="button">Submit</button>
+    
+    <script src="popup.js"></script>
   </body>
 </html>
