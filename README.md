@@ -12,6 +12,7 @@ HateShield is a Chrome extension that utilizes advanced Natural Language Process
 - **User-Friendly Interface:** Simple and intuitive interface for a seamless user experience.
 - **Accuracy:** more accurate and consistent than competitors in the market
 ## How it works
+![HateShield Workflow](path_to_your_flowchart_image)
 1. Platform Selection: Users can choose the social media platforms where they want to apply the comment blocking functionality, such as YouTube, Instagram, or Twitter.
 2. Filtering Sensitivity: Users can select the intensity level of the hate comment filtering, ranging from low to high sensitivity, to match their desired level of protection.
 3. NLP Analysis: The extension utilizes advanced Natural Language Processing (NLP) techniques to analyze comments displayed on the screen in real-time, using the BART ai model
