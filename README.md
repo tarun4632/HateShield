@@ -28,8 +28,8 @@ HateShield is a Chrome extension that utilizes advanced Natural Language Process
 
 ## UI Design
 <p align="center">
-  <img src="utils/ui1.png" alt="HateShield UI" width="400" />
-  <img src="utils/ui2.png" alt="HateShield UI" width="400" />
+  <img src="utils/ui1.jpg" alt="HateShield UI" width="400" />
+  <img src="utils/ui2.jpg" alt="HateShield UI" width="400" />
 </p>
 
 ## Installation
