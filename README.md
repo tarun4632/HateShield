@@ -18,8 +18,9 @@ HateShield is a Chrome extension that utilizes advanced Natural Language Process
 5. Overwriting Comments: If a comment matches any of the predefined categories, it is overwritten with a standardized message, such as "This comment was suspended beacuse deemed <category>."
 6. Customization: Users have the flexibility to add or remove keywords from the blocked list, allowing them to fine-tune the filtering criteria according to their preferences.
 
-![HateShield UI](utils/image.png)
 ![HateShield UI](utils/first.png)
+![HateShield UI](utils/image.png)
+
 
 ## Installation
 
